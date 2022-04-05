@@ -394,7 +394,7 @@ packages:
     source: hosted
     version: "0.4.8"
   tflite_flutter:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: tflite_flutter
       url: "https://pub.dartlang.org"
