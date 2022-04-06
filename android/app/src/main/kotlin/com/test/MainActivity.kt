@@ -1,4 +1,4 @@
-package com.example.imageclassification
+package com.test
 
 import io.flutter.embedding.android.FlutterActivity
 
