@@ -1,11 +1,11 @@
 import 'dart:io';
-import 'package:image/image.dart' as img;
+// import 'package:image/image.dart' as img;
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:imageclassification/classifier.dart';
-import 'package:imageclassification/classifier_quant.dart';
+// import 'package:imageclassification/classifier.dart';
+// import 'package:imageclassification/classifier_quant.dart';
 import 'package:logger/logger.dart';
-import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
+// import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
 
 void main() => runApp(MyApp());
 
@@ -32,7 +32,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  late Classifier _classifier;
+  // late Classifier _classifier;
 
   var logger = Logger();
 
@@ -41,14 +41,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Image? _imageWidget;
 
-  img.Image? fox;
+  // img.Image? fox;
 
-  Category? category;
+  // Category? category;
 
   @override
   void initState() {
     super.initState();
-    _classifier = ClassifierQuant();
+    // _classifier = ClassifierQuant();
   }
 
   Future getImage() async {
@@ -63,11 +63,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _predict() async {
-    img.Image imageInput = img.decodeImage(_image!.readAsBytesSync())!;
-    var pred = _classifier.predict(imageInput);
+    // img.Image imageInput = img.decodeImage(_image!.readAsBytesSync())!;
+    // var pred = _classifier.predict(imageInput);
 
     setState(() {
-      this.category = pred;
+      // this.category = pred;
     });
   }
 
@@ -95,19 +95,19 @@ class _MyHomePageState extends State<MyHomePage> {
           SizedBox(
             height: 36,
           ),
-          Text(
-            category != null ? category!.label : '',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-          ),
+          // Text(
+          //   category != null ? category!.label : '',
+          //   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+          // ),
           SizedBox(
             height: 8,
           ),
-          Text(
-            category != null
-                ? 'Confidence: ${category!.score.toStringAsFixed(3)}'
-                : '',
-            style: TextStyle(fontSize: 16),
-          ),
+          // Text(
+          //   category != null
+          //       ? 'Confidence: ${category!.score.toStringAsFixed(3)}'
+          //       : '',
+          //   style: TextStyle(fontSize: 16),
+          // ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
